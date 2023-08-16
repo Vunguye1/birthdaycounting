@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+.mycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust this value to control the height of the container */
+  background-color: #f0f0f0; /* Change this to your desired background color */
+}
+
+
+.mycontainer > input {
+  width:  15rem;
+  height: 2rem;
+  font-size: 1rem;
+  margin: 0.625rem
+}
+
+.mycontainer > input:focus {  
+  background-color: bisque;
+}
+button {
+  padding: 0.625rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #A5E1D2;
+  cursor: pointer;
+}
+
+.show {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh; /* Adjust this value to control the height of the container */
+  align-items: center;
+}
+
+.show > div {
+  padding: 3rem;
+  margin: 2rem;
+  font-size: 3rem;
+  background-color: #FBF6EC;
+  border: 1px solid black;
+  border-radius: 30%;
+}
