@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/birthdaycounting/static/css/main.4630f290.css",
+    "main.js": "/birthdaycounting/static/js/main.4a70ba20.js",
+    "static/js/787.2f9d82a1.chunk.js": "/birthdaycounting/static/js/787.2f9d82a1.chunk.js",
+    "index.html": "/birthdaycounting/index.html",
+    "main.4630f290.css.map": "/birthdaycounting/static/css/main.4630f290.css.map",
+    "main.4a70ba20.js.map": "/birthdaycounting/static/js/main.4a70ba20.js.map",
+    "787.2f9d82a1.chunk.js.map": "/birthdaycounting/static/js/787.2f9d82a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4630f290.css",
+    "static/js/main.4a70ba20.js"
+  ]
+}
