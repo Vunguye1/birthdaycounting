@@ -1,24 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Calculate_Day } from "./components/timer";
 import { listofmonth } from "./data/months";
 import { keyboardKey } from "@testing-library/user-event";
-
+import ResultPage from "./pages/result";
 interface Monthobj {
   numb: number;
   word: string | undefined;
-}
-
-function TimerComponent({ day }: { day: Date }) {
-  const { days, hours, minutes, seconds } = Calculate_Day(day);
-  return (
-    <div className="show">
-      <div> {days} days</div>
-      <div> {hours} hours</div>
-      <div> {minutes} minutes</div>
-      <div> {seconds} seconds</div>
-    </div>
-  );
 }
 
 function App() {
@@ -58,7 +45,7 @@ function App() {
       } else if (new Date() > day) {
         day.setFullYear(day.getFullYear() + 1);
       }
-      return <TimerComponent day={day} />;
+      return <ResultPage day={day} />;
     } else {
       return <div>Invalid day or month input</div>;
     }
