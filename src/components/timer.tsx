@@ -5,7 +5,7 @@ const minute = second * 60;
 const hour = minute * 60;
 const day = hour * 24;
 
-export const useMyTimer = (birthday: Date, interval = second) => {
+export const Calculate_Day = (birthday: Date, interval = second) => {
   const daysleft = birthday.getTime() - Date.now(); // 60 days = 8.000.000 ms f.eks
   const [time, setTime] = useState(daysleft); // time  = 8.000.000 ms f.eks
 

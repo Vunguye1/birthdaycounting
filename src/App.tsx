@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import { useMyTimer } from "./components/timer";
-import { listofmonth } from "./months";
+import { Calculate_Day } from "./components/timer";
+import { listofmonth } from "./data/months";
 import { keyboardKey } from "@testing-library/user-event";
 
 interface Monthobj {
@@ -10,7 +10,7 @@ interface Monthobj {
 }
 
 function TimerComponent({ day }: { day: Date }) {
-  const { days, hours, minutes, seconds } = useMyTimer(day);
+  const { days, hours, minutes, seconds } = Calculate_Day(day);
   return (
     <div className="show">
       <div> {days} days</div>
@@ -27,7 +27,7 @@ function App() {
     month: "",
   });
 
-  const [confirm, setConfirm] = useState(false);
+  const [confirm, setConfirm] = useState(false); // set confirm when user click or "enter"
 
   const months: Monthobj[] = listofmonth;
 
@@ -48,13 +48,13 @@ function App() {
     );
 
     if (myMonth && myDay) {
-      const day: Date = new Date(2023, myMonth.numb, myDay);
+      const day: Date = new Date(new Date().getFullYear(), myMonth.numb, myDay);
 
       if (
         new Date().getDate() === day.getDate() &&
         new Date().getMonth() === day.getMonth()
       ) {
-        return <div>Happy birthday brillebjorn</div>;
+        return <div className="birthday">Happy birthday brillebjorn</div>;
       } else if (new Date() > day) {
         day.setFullYear(day.getFullYear() + 1);
       }
@@ -67,6 +67,7 @@ function App() {
   return (
     <div className="mycontainer">
       <input
+        autoFocus
         placeholder="Day"
         value={birthday.day}
         onChange={(e) => {
