@@ -1,8 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import MainPage from "./pages/mainpage";
+import Home from "./pages/home";
+import BirthdayGreeting from "./pages/birthday-greeting";
 
 function App() {
-  return <MainPage></MainPage>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route index path="/birthdaycounting" element={<Home />} />
+          <Route path="/birthdaygreeting" element={<BirthdayGreeting />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -1,3 +1,22 @@
+@font-face {
+  /* Font face declaration */
+  font-family: OpensansRegular;
+  src: url(fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpensansHeader;
+  src: url(fonts/Open_Sans/static/OpenSans-SemiBold.ttf);
+}
+
+body {
+  font-family: OpensansRegular, sans-serif;
+}
+
+h1 {
+  font-family: OpensansHeader;
+}
+
 .mycontainer {
   display: flex;
   flex-direction: column;
@@ -27,19 +46,27 @@ button:hover {
   cursor: pointer;
 }
 
-.show {
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 100vh; /* Adjust this value to control the height of the container */
+  flex-direction: column;
+  height: 100vh;
   align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+  color: rgba(55, 59, 65, 0.8);
 }
 
-.show > div {
-  padding: 3rem;
-  margin: 2rem;
+.show > li {
+  display: inline-block;
+  list-style-type: none;
   font-size: 3rem;
-  background-color: #fbf6ec;
-  border: 1px solid black;
-  border-radius: 30%;
+  padding: 1rem;
+  text-align: center;
+}
+
+li > span {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: lighter;
 }

@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import ResultPage from "./result";
 import { keyboardKey } from "@testing-library/user-event";
 import { listofmonth } from "../data/months";
+import { useNavigate } from "react-router-dom";
 
 interface Monthobj {
   numb: number;
   word: string | undefined;
 }
-function MainPage() {
+
+function Home() {
+  const navigate = useNavigate();
+
   const [birthday, setBirthday] = useState({
     day: "",
     month: "",
@@ -40,13 +44,13 @@ function MainPage() {
         new Date().getDate() === day.getDate() &&
         new Date().getMonth() === day.getMonth()
       ) {
-        return <div className="birthday">Happy birthday brillebjorn</div>;
+        navigate("/birthdaygreeting"); // navigate to the birthday page
       } else if (new Date() > day) {
         day.setFullYear(day.getFullYear() + 1);
       }
       return <ResultPage day={day} />;
     } else {
-      return <div>Invalid day or month input</div>;
+      return <div className="invalid">Invalid day or month input</div>;
     }
   }
 
@@ -79,4 +83,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default Home;
