@@ -1,9 +1,10 @@
 import React from "react";
 import bgCSS from "./birthday-greeting.module.css"; // practice using css module
-
-const BirthdayGreeting = (props: any) => {
+import ReactConfetti from "react-confetti";
+const BirthdayGreeting = () => {
   return (
     <div>
+      <ReactConfetti />
       <html lang="en">
         <head>
           <meta charSet="UTF-8" />
@@ -11,14 +12,13 @@ const BirthdayGreeting = (props: any) => {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>haha</title>
         </head>
-        <body>
+        <body className={bgCSS.grbody}>
           <div className={bgCSS.container}>
             <div className={bgCSS.birthdayCard}>
               <div className={bgCSS.cardcover}>
                 <div className={bgCSS.cardcoverfront}>
-                  <p>Happy birthday, {props.name}</p>
+                  <p>Happy birthday</p>
                 </div>
                 <div className={bgCSS.cardcoverback}></div>
               </div>

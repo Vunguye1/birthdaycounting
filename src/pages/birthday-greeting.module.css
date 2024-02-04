@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+.grbody {
   background-color: #8377be;
 }
 
@@ -30,12 +30,11 @@ body {
   position: absolute;
   height: 100%;
   width: 50%;
-  border: 1px solid black;
 }
 
 /* Card content */
 .cardcontent {
-  background: linear-gradient(to right, white, #d8d5d5 30%);
+  background: linear-gradient(to right, white, #e9e7e7 30%);
   padding: 2rem;
   text-align: center;
   line-height: 2rem;
@@ -70,7 +69,7 @@ body {
 
 .cardcoverback {
   transform: rotateY(180deg);
-  background: linear-gradient(to left, #d8d5d5, white 30%);
+  background: linear-gradient(to left, #e9e7e7, white 30%);
 }
 
 /* Transformation */
