@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8377be;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.birthdayCard {
+  display: flex;
+  position: relative; /* Make sure that both card cover and card content will be placed inside of the whole birthday card */
+  width: 700px;
+  height: 500px;
+  transition: 1s;
+  left: 13%;
+}
+
+.cardcover,
+.cardcontent {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border: 1px solid black;
+}
+
+/* Card content */
+.cardcontent {
+  background: linear-gradient(to right, white, #d8d5d5 30%);
+  padding: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-style: italic;
+}
+
+/* Card cover */
+.cardcoverfront,
+.cardcoverback {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* keep the front of the post card hidden while transforming */
+  transform: rotateX(0deg);
+}
+
+.cardcoverfront {
+  background-image: url("../img/birthday.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.cardcoverfront p {
+  color: white;
+  letter-spacing: 6px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.cardcoverback {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #d8d5d5, white 30%);
+}
+
+/* Transformation */
+.cardcover {
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+}
+.birthdayCard:hover {
+  transform: rotate(-5deg);
+}
+.birthdayCard:hover .cardcover {
+  transform: rotateY(-200deg);
+}
