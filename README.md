@@ -10,3 +10,5 @@ It is recommended to test on PC as the application is not yet responsive
 <br/>
 
 Test the application [here](https://vunguye1.github.io/birthdaycounting/).
+
+[Image source](https://dribbble.com/shots/7020095-Happy-birthday/attachments/20624?mode=media).
