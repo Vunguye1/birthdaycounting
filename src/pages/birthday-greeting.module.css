@@ -81,7 +81,9 @@
 }
 .birthdayCard:hover {
   transform: rotate(-5deg);
+  cursor: pointer;
 }
 .birthdayCard:hover .cardcover {
   transform: rotateY(-200deg);
+  cursor: pointer;
 }
